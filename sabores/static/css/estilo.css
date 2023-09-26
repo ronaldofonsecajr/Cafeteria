@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,100;1,200;1,400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+#largurasite{
+    width: 980px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+#larguracad{
+    width: auto;
+    height: 500px;
+    margin: auto;
+}
+
+#topo{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#menu{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    line-height: 40px;
+    text-align: center;
+}
+    
+#menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 75px;
+}
+
+#conteudo{
+    width: 60%;
+    height: auto;
+    float: left;
+}
+
+#coluna{
+    width: 40%;
+    height: auto;
+    float: right;
+}
+
+.imghome {
+    max-width: 100%;
+    height: auto;
+}
+
+.input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+
+.cadastro{
+    width: 100px;
+    height: auto;
+    position: fixed;
+}
+
+.imgcad{
+    width: 100%;
+    height: auto; 
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.imgfood{
+    width: 0px 20px;
+}
+
+
+h1{
+    color: #000000;
+    text-align: center;
+    font-size: 60pt;
+}
+
+h2{
+    color: #000000;
+    text-align: center;
+    font-size: 40pt;
+}
+
+input[type=text]{
+    width: 650px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+input[type=submit]{
+    width: 200px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: white;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    margin-top: 5px;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    }
+    
+table {
+    border-collapse: collapse;
+    margin: auto;
+    }
+    
+th, td{
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    }
+    
+th{
+    font-weight: bold;
+    }
+    
+    
+tr:nth-child(even) {
+    background-color: #DCEBE6;
+    }
+    
+tr:hover:nth-child(1n + 2) {
+    background-color: #085F63;
+    color: #fff;
+    }
+    
+
+footer{
+    background-color: #000000;
+    height: auto;
+    text-align: center;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    position: fixed; 
+}
+
+o{
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+   
+    #conteudo, #coluna{
+        width: 100%;
+    }
+}

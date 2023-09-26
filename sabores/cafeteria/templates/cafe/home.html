@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="icon" href="{% static 'img/cafe.png' %}" type="image/x-icon" />
+    <title>Todos Sabores - Cadastro</title>
+</head>
+<body>
+    <div id="topo">
+        <nav id="menu">
+            <a href="http://127.0.0.1:8000/">Cadastro</a>
+            <a href="http://127.0.0.1:8000/cafe/">Pedidos</a>
+        </nav>
+    </div>
+    <h1>Cadastro</h1>
+    <div id="larguracad"> 
+        <article id="conteudo">
+            <img src="{% static 'img/sale-removebg-preview.png' %}" class="imgcad">
+        </article>
+
+        <aside id="coluna">  
+            <form action="{% url 'pedidos' %}" method="post" id="cadastro">
+                {% csrf_token %}
+                Nome:<br>
+                <input type="text" name="nome" value=""><br>
+                Email:<br>
+                <input type="text" name="email" value=""><br>
+                Celular:<br>
+                <input type="text" name="celular" value=""><br>
+                Endereço:<br>
+                <input type="text" name="endereco" value=""><br>
+                <div>
+                    <div class="item">
+                        <img src="{% static 'img/combo2.webp' %}" width="180" class="imghome"> <br>
+                        <input type="checkbox" name="combo" value="Combo 1" class="input"> Combo #1 - R$9.90
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/combo1.jpg' %}" width="180" class="imghome"> <br>
+                        <input type="checkbox" name="combo" value="Combo 2" class="input"> Combo #2 - R$12.90
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'img/combo3.png' %}" width="180" class="imghome"> <br>
+                        <input type="checkbox" name="combo" value="Combo 3" class="input"> Combo #3 - R$15.90 
+                    </div>    
+                </div>    
+                <button>Comprar</button>
+            </form>
+        </aside>
+    </div>
+    <footer>
+        <o>Desenvolvido por 
+            <a href="https://github.com/ronaldofonsecajr" target="_blank">@FonsecaJr</a></o>
+    </footer>   
+     
+</body>
+</html>

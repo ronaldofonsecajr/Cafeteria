@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="icon" href="{% static 'img/cafe.png' %}" type="image/x-icon" />
+    <title>Todos Sabores - Pedidos</title>
+</head>
+<body>
+    <div id="topo">
+        <nav id="menu">
+            <a href="http://127.0.0.1:8000/">Cadastro</a>
+            <a href="http://127.0.0.1:8000/cafe/">Pedidos</a>
+        </nav>
+    </div>
+    <div id="largurasite">
+        <h2>Pedidos</h2>
+        <table>
+            <thead> 
+                <tr>
+                    <th>Numero do Pedido</th>
+                    <th>Nome</th>
+                    <th>Celular</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Combo</th>
+                </tr>
+            </thead>       
+            {% for usuario in usuarios %}
+            <tbody>
+                <tr>
+                    <td>{{usuario.pedido}}</td>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.celular}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.endereco}}</td>
+                    <td>{{usuario.combo}}</td>
+                </tr>
+            </tbody>    
+            {% endfor %}
+        </table>
+        <h3>Endereço</h3>
+        <p>Rua Bambina 107, Botafogo - RJ</p>
+        <p>Segunda à Sexta - 08-20h</p>
+        <p>Sábado, Domingo e Feriados - 09-18h</p>
+        <br/>
+        <a href="#" target="_blank"><img src="{% static 'img/instagram.svg' %}" width="30px"></a>
+        <a href="#" target="_blank"><img src="{% static 'img/facebook.png' %}" width="30px"></a>
+        <a href="#" target="_blank"><img src="{% static 'img/twitter.png' %}" width="30px"></a>
+        <br/>
+        <br>
+        <br>
+    </div>
+    <footer>
+        <o>Desenvolvido por 
+            <a href="https://github.com/ronaldofonsecajr" target="_blank">@FonsecaJr</a></o>
+    </footer>  
+</body>
+</html>
+
+
+
